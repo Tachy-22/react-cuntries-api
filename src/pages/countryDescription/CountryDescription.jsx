@@ -14,7 +14,7 @@ const CountryDescription = () => {
 
   const subHeadingStyles =
     "font-semibold capitalize flex gap-2 w-fit border md:text-base text-sm";
-  const infoStyles = "text-gray-600 font-medium capitalize flex";
+  const infoStyles = "text-gray-500 font-medium capitalize flex";
 
   return (
     <div className="flex flex-col gap-6 lg:gap-[4rem] lg:p-[3rem] p-3">
