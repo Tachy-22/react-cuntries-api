@@ -1,8 +1,9 @@
 import FilterCountries from "./FilterCountries";
 import SearchCountries from "./SearchCountries";
-import Countries from "./Countries";
-import { useMemo } from "react";
+import { Suspense, lazy, useMemo } from "react";
 import Data from "../../../../data.json";
+
+const Content = lazy(() => import("./Countries"));
 
 const CountriesDisplay = () => {
   const CountriesData = useMemo(() => Data, []);
@@ -16,7 +17,11 @@ const CountriesDisplay = () => {
 
         <FilterCountries Countries={CountriesData} />
       </div>
-      <Countries />
+      <section className="">
+        <Suspense fallback={<p>Loading Countries</p>}>
+          <Content />
+        </Suspense>
+      </section>
     </section>
   );
 };
