@@ -39,6 +39,9 @@ export const SearchCountries = ({ Countries }) => {
       className="border shadow-lg bg-white flex gap-4 px-3 py-2 justify-between items-center h-fit"
       onSubmit={handleCountrySearch}
     >
+      <button id="search" aria-label="search" type="submit">
+        <BsSearch />
+      </button>
       <search>
         <label htmlFor="countryInput" className="hidden">
           Search
@@ -52,9 +55,6 @@ export const SearchCountries = ({ Countries }) => {
           autoFocus={true}
           aria-labelledby="countryInput"
         />
-        <button id="search" aria-label="search" type="submit">
-          <BsSearch />
-        </button>
       </search>
     </form>
   );
