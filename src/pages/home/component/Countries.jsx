@@ -9,7 +9,7 @@ const Countries = () => {
 
   const lastElementRef = useRef(null);
 
-  const checkLastElementInView = () => {
+  const addCountries = () => {
     if (lastElementRef.current) {
       const bounding = lastElementRef.current.getBoundingClientRect();
       const condition =
@@ -21,7 +21,7 @@ const Countries = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      checkLastElementInView();
+      addCountries();
     };
 
     window.addEventListener("scroll", handleScroll);
