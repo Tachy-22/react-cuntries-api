@@ -1,6 +1,6 @@
 import { Suspense, lazy } from "react";
 const Content = lazy(() =>
-  import("../home/component/CountriesDescriptionContent")
+  import("./CountriesDescriptionContent")
 );
 
 const CountryDescription = () => {
