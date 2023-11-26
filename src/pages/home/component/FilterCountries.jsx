@@ -42,11 +42,13 @@ export const FilterCountries = ({ Countries }) => {
         className="flex shadow-lg border w-[15rem] justify-between items-center px-4 py-3 bg-white z-10"
       >
         <p className="">Filter by region</p>
-        <IoMdArrowDropdown
-          className={`text-2xl  transition-all duration-1000  ${
-            showOptions ? "-rotate-180 " : ""
-          } "`}
-        />
+        <button type="button" name={`drop-down`}>
+          <IoMdArrowDropdown
+            className={`text-2xl  transition-all duration-1000  ${
+              showOptions ? "-rotate-180 " : ""
+            } "`}
+          />
+        </button>
       </div>
       <dialog open={showOptions}>
         <ul

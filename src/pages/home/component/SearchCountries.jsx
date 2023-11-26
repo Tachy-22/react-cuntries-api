@@ -34,15 +34,19 @@ export const SearchCountries = ({ Countries }) => {
   return (
     <form
       action=""
+      autoComplete="on"
       className="border shadow-lg bg-white flex gap-4 px-3 py-2 justify-between items-center h-fit"
       onSubmit={handleCountrySearch}
     >
-      <button className="" type="submit">
+      <button name={`submit`} type="submit">
         <BsSearch />
       </button>
       <search>
         {" "}
+        <label htmlFor="search-Text"></label>
         <input
+          name="search-Text"
+          id="search-Text"
           ref={countryRef}
           type="text"
           className="outline-none h-fit"
