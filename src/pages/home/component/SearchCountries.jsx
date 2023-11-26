@@ -42,16 +42,17 @@ export const SearchCountries = ({ Countries }) => {
         <BsSearch />
       </button>
       <search>
-        {" "}
-        <input
-          name="search-Text"
-          id="search-Text"
-          ref={countryRef}
-          type="text"
-          className="outline-none h-fit"
-          autoFocus={true}
-          aria-labelledby="country input"
-        />
+        <label htmlFor="countryInput">
+          <input
+            name="countryInput"
+            id="countryInput"
+            ref={countryRef}
+            type="text"
+            className="outline-none h-fit"
+            autoFocus={true}
+            aria-labelledby="countryInput"
+          />
+        </label>
       </search>
     </form>
   );
