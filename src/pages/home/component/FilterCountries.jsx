@@ -50,7 +50,7 @@ export const FilterCountries = ({ Countries }) => {
           />
         </button>
       </div>
-      <dialog open={showOptions}>
+      <div open={showOptions}>
         <ul
           onMouseLeave={() => {
             setShowOptions(false);
@@ -69,7 +69,7 @@ export const FilterCountries = ({ Countries }) => {
             </li>
           ))}
         </ul>
-      </dialog>
+      </div>
     </div>
   );
 };
