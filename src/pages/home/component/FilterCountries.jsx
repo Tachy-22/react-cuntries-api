@@ -49,7 +49,7 @@ export const FilterCountries = ({ Countries }) => {
         />
       </div>
       <dialog open={showOptions}>
-        <datalist
+        <ul
           onMouseLeave={() => {
             setShowOptions(false);
           }}
@@ -66,7 +66,7 @@ export const FilterCountries = ({ Countries }) => {
               {region}
             </li>
           ))}
-        </datalist>
+        </ul>
       </dialog>
     </div>
   );
