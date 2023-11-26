@@ -35,7 +35,7 @@ export const SearchCountries = ({Countries}) => {
   }, [searchKey, dispatch, Countries]);
 
   return (
-    <>
+   <search>
       <form
         action=""
         className="border shadow-lg bg-white flex gap-4 px-3 py-2 justify-between items-center h-fit"
@@ -51,7 +51,7 @@ export const SearchCountries = ({Countries}) => {
           autoFocus={true}
         />
       </form>
-    </>
+    </search>
   );
 };
 export default SearchCountries;

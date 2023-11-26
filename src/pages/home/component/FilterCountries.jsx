@@ -48,24 +48,26 @@ export const FilterCountries = ({ Countries }) => {
           } "`}
         />
       </div>
-      <ul
-        onMouseLeave={() => {
-          setShowOptions(false);
-        }}
-        className={` ${
-          showOptions ? "translate-y-0 py-2 " : "-translate-y-[200%] h-0 py-0"
-        } transition-all duration-1000 flex flex-col  bg-transparent -z-0   -lg  rounded-md `}
-      >
-        {regions.map((region, index) => (
-          <li
-            key={index}
-            onClick={handleRegionSelection}
-            className={` p-1 px-4 hover:underline underline-offset-4 cursor-pointer "`}
-          >
-            {region}
-          </li>
-        ))}
-      </ul>
+      <dialog open={showOptions}>
+        <datalist
+          onMouseLeave={() => {
+            setShowOptions(false);
+          }}
+          className={` ${
+            showOptions ? "translate-y-0 py-2 " : "-translate-y-[200%] h-0 py-0"
+          } transition-all duration-1000 flex flex-col  bg-transparent -z-0   -lg  rounded-md `}
+        >
+          {regions.map((region, index) => (
+            <li
+              key={index}
+              onClick={handleRegionSelection}
+              className={` p-1 px-4 hover:underline underline-offset-4 cursor-pointer "`}
+            >
+              {region}
+            </li>
+          ))}
+        </datalist>
+      </dialog>
     </div>
   );
 };

@@ -24,7 +24,7 @@ const CountryCard = ({ country }) => {
   }, [country, dispatch, navigate]);
 
   return (
-    <>
+  
       <div
         ref={countryCardRef}
         className={`" flex flex-col translate-y-[2rem] bg-white w-full transition-all duration-[3s] rounded-md  ${
@@ -53,7 +53,7 @@ const CountryCard = ({ country }) => {
           </p>
         </div>
       </div>
-    </>
+  
   );
 };
 

@@ -8,7 +8,7 @@ const CountriesDisplay = () => {
   const CountriesData = useMemo(() => Data, []);
 
   return (
-    <div
+    <section
       className={`" lg:px-[4rem] p-4 lg:py-[2rem]  gap-[1rem] flex flex-col justify-between  "`}
     >
       <div className="flex  w-full justify-between relative pb-[2rem]">
@@ -17,7 +17,7 @@ const CountriesDisplay = () => {
         <FilterCountries Countries={CountriesData} />
       </div>
       <Countries />
-    </div>
+    </section>
   );
 };
 

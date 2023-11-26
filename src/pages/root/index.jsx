@@ -1,16 +1,13 @@
-//import { Suspense } from "react";
-import { Suspense } from "react";
+/* eslint-disable react/prop-types */
+
 import { Nav } from "./components/Nav";
 
-/* eslint-disable react/prop-types */
 const Root = ({ children }) => {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
-      <div className="bg-gray-100 min-h-screen">
-        <Nav />
-        {children}
-      </div>
-    </Suspense>
+    <main className="bg-gray-100 min-h-screen">
+      <Nav />
+      {children}
+    </main>
   );
 };
 
