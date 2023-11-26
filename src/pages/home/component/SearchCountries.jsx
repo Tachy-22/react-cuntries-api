@@ -38,12 +38,11 @@ export const SearchCountries = ({ Countries }) => {
       className="border shadow-lg bg-white flex gap-4 px-3 py-2 justify-between items-center h-fit"
       onSubmit={handleCountrySearch}
     >
-      <button name={`submit`} type="submit">
+      <button id="search" aria-label="search" type="submit">
         <BsSearch />
       </button>
       <search>
         {" "}
-        <label htmlFor="search-Text"></label>
         <input
           name="search-Text"
           id="search-Text"
@@ -51,6 +50,7 @@ export const SearchCountries = ({ Countries }) => {
           type="text"
           className="outline-none h-fit"
           autoFocus={true}
+          aria-labelledby="country input"
         />
       </search>
     </form>
