@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 /* eslint-disable react/prop-types */
 import { useCallback, useEffect, useRef, useState } from "react";
 import { BsSearch } from "react-icons/bs";
@@ -42,7 +43,7 @@ export const SearchCountries = ({ Countries }) => {
         <BsSearch />
       </button>
       <search>
-        <label htmlFor="countryInput">
+        <label for="countryInput">
           <input
             name="countryInput"
             id="countryInput"
