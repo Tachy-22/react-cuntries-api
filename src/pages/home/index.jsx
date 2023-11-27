@@ -1,12 +1,12 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, memo } from "react";
 
 const Content = lazy(() => import("./component/CountriesDisplay"));
-const Home = () => {
+const HomeMemoised = () => {
   return (
     <Suspense fallback={<p>Loading countries...</p>}>
       <Content />
     </Suspense>
   );
 };
-
+const Home = memo(HomeMemoised);
 export default Home;

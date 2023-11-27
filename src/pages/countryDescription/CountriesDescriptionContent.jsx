@@ -10,23 +10,23 @@ const CountriesDescriptionContent = () => {
     navigate(-1);
   }, [navigate]);
 
- // console.log("countryInView :", countryInView);
+  // console.log("countryInView :", countryInView);
   const subHeadingStyles =
-    "font-semibold capitalize flex gap-2 w-fit border md:text-base text-sm";
+    "font-semibold capitalize flex gap-2 w-fit  md:text-base text-sm";
   const infoStyles = "text-gray-500 font-medium capitalize flex";
 
   return (
     <>
       <div
         onClick={handleBackNav}
-        className=" w-fit lg:py-2 lg:px-6 py-1 px-4 border-gray-300 shadow-md border-2 rounded flex  justify-center gap-2 items-center cursor-pointer lg:hover:shadow-xl lg:hover:-translate-y-3 transition-all duration-700"
+        className=" w-fit lg:py-2 lg:px-6 py-1 px-4 border-gray-300 dark:text-white  shadow-md border-2 rounded flex  justify-center gap-2 items-center cursor-pointer lg:hover:shadow-xl lg:hover:-translate-y-3 transition-all duration-700"
       >
         <FaArrowLeftLong className="text " /> Back
       </div>
-      <section className="flex justify-between items-center xl:flex-row flex-col  gap-[5rem] xl:px-0 lg:px-[10rem] ">
+      <section className="flex justify-between items-center xl:flex-row flex-col  gap-[5rem] xl:px-0 lg:px-[10rem]  dark:text-white ">
         <img src={countryInView?.flag} alt="" className="xl:w-[50%] w-full" />
         <div className=" flex flex-col  border-black xl:w-[50%] w-full  ">
-          <h2 className="xxl:text-2xl text-xl font-bold xl:pb-[4rem] pb-6">
+          <h2 className="xl:text-3xl text-xl font-bold xl:pb-[3rem] pb-6">
             {countryInView?.name}
           </h2>
           <div className="grid grid-flow-row grid-cols-2 gap-3 cursor-pointer">
@@ -60,7 +60,8 @@ const CountriesDescriptionContent = () => {
               currencies:
               <span className={infoStyles}>
                 {" "}
-                {countryInView?.currencies[0].code}{" "}
+                {typeof countryInView.currencies !== "undefined" &&
+                  countryInView?.currencies[0]?.code}{" "}
               </span>
             </p>
             <div className={subHeadingStyles}>

@@ -1,14 +1,13 @@
 /* eslint-disable react/prop-types */
-import { useCallback, useEffect,  useState } from "react";
+import { memo, useCallback, useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
 import { updateCountryInView } from "../../../redux/appSlice";
 import { useNavigate } from "react-router-dom";
 
-const CountryCard = ({ country, countryCardRef }) => {
+const CountryCardMemoised = ({ country, countryCardRef }) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const [showCard, setShowCard] = useState(false);
-  
 
   useEffect(() => {
     setShowCard(true);
@@ -26,7 +25,7 @@ const CountryCard = ({ country, countryCardRef }) => {
   return (
     <div
       ref={countryCardRef}
-      className={`" flex flex-col translate-y-[2rem] bg-white w-full transition-all duration-[3s] rounded-md  ${
+      className={`" flex flex-col translate-y-[2rem] bg-white dark:bg-gray-700 dark:text-white w-full transition-all duration-[3s] rounded-md  ${
         showCard && country.flag
           ? "opacity-1 translate-y-0"
           : "opacity-0 -translate-y-[2rem]"
@@ -53,5 +52,5 @@ const CountryCard = ({ country, countryCardRef }) => {
     </div>
   );
 };
-
+const CountryCard = memo(CountryCardMemoised);
 export default CountryCard;

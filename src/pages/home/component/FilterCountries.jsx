@@ -36,10 +36,10 @@ export const FilterCountries = ({ Countries }) => {
   );
 
   return (
-    <div className="overflow-hidden  bg-white flex flex-col absolute lg:right-0  lg:top-0 lg:translate-y-0 translate-y-12  z-20 lg:hover:shadow-xl transition-all duration-700 ">
+    <div className="overflow-hidden  bg-white dark:bg-gray-700 dark:text-white  flex flex-col absolute lg:right-0  lg:top-0 lg:translate-y-0 translate-y-12  z-20 lg:hover:shadow-xl transition-all duration-700 ">
       <div
         onClick={handleShowOptions}
-        className="flex shadow-lg border w-[15rem] justify-between items-center px-4 py-3 bg-white z-10"
+        className="flex shadow-lg  w-[15rem] justify-between items-center px-4 py-3 bg-inherit z-10"
       >
         <p className="">Filter by region</p>
         <button type="button" id="dropdown" aria-label="dropdown">

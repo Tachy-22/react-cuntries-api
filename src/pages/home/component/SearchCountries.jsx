@@ -36,7 +36,7 @@ export const SearchCountries = ({ Countries }) => {
     <form
       action=""
       autoComplete="on"
-      className="border w-full  sm:w-[20rem]  shadow-lg bg-white flex gap-4 px-3 py-2 justify-between items-center h-fit"
+      className=" w-full  sm:w-[20rem] rounded-md shadow-lg bg-white dark:bg-gray-700 dark:text-white  flex gap-4 px-3 py-2 justify-between items-center h-fit"
       onSubmit={handleCountrySearch}
     >
       <button id="search" aria-label="search" type="submit">
@@ -52,7 +52,7 @@ export const SearchCountries = ({ Countries }) => {
           id="countryInput"
           ref={countryRef}
           type="text"
-          className="outline-none h-fit "
+          className="outline-none h-fit bg-inherit "
           autoFocus={true}
           aria-labelledby="countryInput"
         />
